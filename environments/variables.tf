@@ -20,7 +20,7 @@ variable "network" {
 }
 
 variable "primary_node_count" {
-  default = "3"
+  default = "0"
 }
 
 variable "machine_type" {
