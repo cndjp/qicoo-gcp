@@ -1,5 +1,5 @@
 variable "project" {
-    default = "shota-resear-77378023"
+    default = "sage-groove-219116"
 }
 
 variable "cluster_name" {
