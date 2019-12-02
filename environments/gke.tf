@@ -1,5 +1,5 @@
 resource "google_container_cluster" "primary" {
-  name     = "primary-${var.cluster_name}"
+  name     = "qicoo-k8s-cluster-001"
   location = "${var.location}"
 
   remove_default_node_pool = true
