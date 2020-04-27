@@ -1,1 +1,1 @@
-primary_node_count=3
+primary_node_count=5
