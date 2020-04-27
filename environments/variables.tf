@@ -28,9 +28,9 @@ variable "machine_type" {
 }
 
 variable "min_master_version" {
-  default = "1.14.8-gke.17"
+  default = "1.14.10-gke.27"
 }
 
 variable "node_version" {
-  default = "1.14.8-gke.17"
+  default = "1.14.10-gke.27"
 }
