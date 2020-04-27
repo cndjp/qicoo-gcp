@@ -7,11 +7,11 @@ variable "cluster_name" {
 }
 
 variable "region" {
-  default = "asia-northeast1"
+  default = "asia-northeast1-a"
 }
 
 variable "location" {
-  default = "asia-northeast1"
+  default = "asia-northeast1-a"
 }
 
 
