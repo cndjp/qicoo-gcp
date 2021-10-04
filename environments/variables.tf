@@ -1,5 +1,5 @@
 variable "project" {
-    default = "sage-groove-219116"
+  default = "sage-groove-219116"
 }
 
 variable "cluster_name" {
@@ -13,7 +13,6 @@ variable "region" {
 variable "location" {
   default = "asia-northeast1-a"
 }
-
 
 variable "network" {
   default = "default"
