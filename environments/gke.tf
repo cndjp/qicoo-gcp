@@ -1,14 +1,14 @@
 resource "google_container_cluster" "primary" {
   name     = "qicoo-k8s-cluster-001"
-  location = "${var.location}"
+  location = var.location
 
   remove_default_node_pool = true
   initial_node_count       = 1
 
-  network = "${var.network}"
+  network = var.network
 
-  min_master_version = "${var.min_master_version}"
-  node_version       = "${var.node_version}"
+  min_master_version = var.min_master_version
+  node_version       = var.node_version
 
   master_auth {
     username = ""
@@ -22,9 +22,9 @@ resource "google_container_cluster" "primary" {
 
 resource "google_container_node_pool" "primary_nodes" {
   name       = "primary-${var.cluster_name}-nodes"
-  location   = "${var.location}"
-  cluster    = "${google_container_cluster.primary.name}"
-  node_count = "${var.primary_node_count}"
+  location   = var.location
+  cluster    = google_container_cluster.primary.name
+  node_count = var.primary_node_count
 
   management {
     auto_repair = true
@@ -40,10 +40,10 @@ resource "google_container_node_pool" "primary_nodes" {
       "https://www.googleapis.com/auth/trace.append",
     ]
 
-    machine_type = "${var.machine_type}"
-
+    machine_type = var.machine_type
     #metadata {
     #  disable-legacy-endpoints = "true"
     #}
   }
 }
+
